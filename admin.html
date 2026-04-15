@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Atendente - Lanchonete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>👨‍💼 Painel do Atendente</h1>
+        <nav class="nav-links">
+            <a href="index.html">⬅️ Voltar ao Cardápio</a>
+        </nav>
+    </header>
+
+    <main>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h2>Gestão de Pedidos</h2>
+            <div>
+                <label for="status-filter" style="font-weight: bold; margin-right: 10px;">Filtrar:</label>
+                <select id="status-filter" style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border-color);">
+                    <option value="todos">Todos</option>
+                    <option value="pendente">Pendentes</option>
+                    <option value="preparo">Em Preparo</option>
+                    <option value="entregue">Entregues</option>
+                    <option value="cancelado">Cancelados</option>
+                </select>
+            </div>
+        </div>
+
+        <section id="orders-container" class="admin-section">
+            <p class="text-center">Carregando pedidos...</p>
+            <!-- Os pedidos serão renderizados aqui pelo JS -->
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

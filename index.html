@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍔 Lanchonete Tudo Gostoso</h1>
+        <nav class="nav-links">
+            <a href="index.html">Cardápio</a>
+            <a href="admin.html">👨‍💼 Área do Atendente</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="client-layout">
+            <!-- Área do Cardápio -->
+            <section id="menu-section">
+                <!-- As categorias e produtos serão gerados dinamicamente via JS -->
+            </section>
+
+            <!-- Área do Carrinho e Checkout -->
+            <aside class="cart-section">
+                <h2 class="cart-title">🛒 Seu Pedido</h2>
+                
+                <div id="cart-items" class="cart-items">
+                    <p class="text-center" style="color: var(--text-light); margin-top: 2rem;">Seu carrinho está vazio.</p>
+                </div>
+
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">R$ 0,00</span>
+                </div>
+
+                <div id="checkout-form-container" class="hidden">
+                    <h3 style="margin-bottom: 15px; border-top: 1px solid #ccc; padding-top: 15px;">Dados de Entrega</h3>
+                    <form id="checkout-form" class="checkout-form">
+                        <div class="form-group">
+                            <label for="cliente-nome">Nome Completo</label>
+                            <input type="text" id="cliente-nome" required placeholder="Ex: João da Silva">
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente-telefone">Telefone</label>
+                            <input type="tel" id="cliente-telefone" required placeholder="(00) 00000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente-endereco">Endereço Completo</label>
+                            <input type="text" id="cliente-endereco" required placeholder="Rua, Número, Bairro">
+                        </div>
+                        <button type="submit" class="btn" id="btn-finalizar">Finalizar Pedido</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Modal de Sucesso / Mensagem -->
+    <div id="toast">Pedido realizado com sucesso! ID: <strong id="toast-id"></strong></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
